@@ -18,7 +18,7 @@ router.post("/",
     [
         validarJWT,
         isVerified,
-        check("precio", "El precio es obligatorio").not().isEmpty(),
+        check("price", "El precio es obligatorio").not().isEmpty(),
         check("shippingCost", "El costo es obligatorio").not().isEmpty(),
         check("total", "El total es obligatorio").not().isEmpty(),
         check("shippingDetails", "Los detalles de envio son obligatorios").not().isEmpty(),
