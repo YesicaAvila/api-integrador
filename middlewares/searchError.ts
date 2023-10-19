@@ -7,8 +7,7 @@ export const searchError = (req: Request, res: Response, next: NextFunction): vo
     
     if(!errors.isEmpty()) {
         res.status(400).json(errors)
-    }else {
+    } else {
         next()
     }
-
 }

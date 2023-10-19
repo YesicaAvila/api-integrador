@@ -42,4 +42,4 @@ const validarJWT = async (req: Request, res: Response, next: NextFunction) => {
     }
 
 }
-export default validarJWT
+export default validarJWT;

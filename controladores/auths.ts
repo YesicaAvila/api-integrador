@@ -44,7 +44,7 @@ export const login = async (req: Request, res: Response): Promise<void> => {
         const usuario = await Usuario.findOne({email});
 
         if(!usuario) {
-            res.status(400).json({
+            res.status(404).json({
                 msg: "No se encontró el mail en la DB"
             });
             return
