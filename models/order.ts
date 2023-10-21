@@ -8,17 +8,16 @@ interface IShippingDetails {
 }
 
 interface IItem {
-    desc: String;
     id: Number;
-    price: Number;
+    precio: Number;
     quantity: Number;
-    title: String;
+    name: String;
 }
 
 export interface IOrder {
     createdAt: Date,
     user: Types.ObjectId;
-    price: Number;
+    precio: Number;
     shippingCost: Number;
     items: IItem[];
     shippingDetails: IShippingDetails;
@@ -37,7 +36,7 @@ const OrderSchema = new Schema<IOrder>({
         ref: 'Usuario',
         required: true,
     },
-    price: {
+    precio: {
         type: Number,
         required: true,
     },
@@ -47,15 +46,11 @@ const OrderSchema = new Schema<IOrder>({
     },
     items: {
         type: [{
-            desc: {
-                type: String,
-                required: true,
-            },
             id: {
                 type: Number,
                 required: true,
             },
-            price: {
+            precio: {
                 type: Number,
                 required: true,
             },
@@ -63,7 +58,7 @@ const OrderSchema = new Schema<IOrder>({
                 type: Number,
                 required: true,
             },
-            title: {
+            name: {
                 type: String,
                 required: true,
             },
