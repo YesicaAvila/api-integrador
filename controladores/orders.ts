@@ -26,7 +26,6 @@ export const createOrder = async (req: Request, res: Response) => {
         user: usuarioId,
         createdAt: new Date(),
         status: "pending"
-
     }
 
     const order = new Order(data);
